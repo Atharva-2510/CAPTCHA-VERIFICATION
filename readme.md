@@ -138,4 +138,4 @@ To enable reCAPTCHA functionality:
 Contact
 Your Name - atharvapimparkar1416@example.com
 
-Project Link: https://github.com/Atharva-2510/Jagdish-Transport
+Project Link: https://github.com/Atharva-2510/CAPTCHA-VERIFICATION
