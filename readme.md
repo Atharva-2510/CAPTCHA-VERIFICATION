@@ -1,4 +1,4 @@
-# Spring Registration System with reCAPTCHA
+# Spring Login System with reCAPTCHA
 
 A secure user registration and login system built with Spring Boot, featuring Google reCAPTCHA integration to prevent automated bot submissions.
 
