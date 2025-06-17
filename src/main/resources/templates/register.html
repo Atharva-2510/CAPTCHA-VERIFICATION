@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register - A2Z IT HUB</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+	<div class="container py-5">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<div class="card shadow">
+					<div class="card-header bg-success text-white text-center">
+						<h3>Register User</h3>
+					</div>
+					<div class="card-body p-4">
+						<div th:if="${successMsg}" class="alert alert-success" role="alert">
+							<span th:text="${successMsg}"></span>
+						</div>
+						
+						<div th:if="${errorMsg}" class="alert alert-danger" role="alert">
+							<span th:text="${errorMsg}"></span>
+						</div>
+						
+						<form th:object="${user}" th:action="@{/register}" method="post">
+							<div class="mb-3">
+								<label for="name" class="form-label">Name</label>
+								<input type="text" class="form-control" id="name" th:field="*{name}" required>
+							</div>
+							
+							<div class="mb-3">
+								<label for="email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="email" th:field="*{email}" required>
+							</div>
+							
+							<div class="mb-3">
+								<label for="password" class="form-label">Password</label>
+								<div class="input-group">
+									<input type="password" class="form-control" id="password" th:field="*{password}" required>
+									<button class="btn btn-outline-secondary toggle-password" type="button" data-target="password">
+										<i class="bi bi-eye"></i>
+									</button>
+								</div>
+							</div>
+							
+							<div class="mb-3">
+								<label for="phoneno" class="form-label">Phone No.</label>
+								<input type="text" class="form-control" id="phoneno" th:field="*{phoneno}" required>
+							</div>
+							
+							<div class="d-grid gap-2">
+								<button type="submit" class="btn btn-success">Register</button>
+							</div>
+						</form>
+					</div>
+					<div class="card-footer text-center">
+						<div class="d-flex justify-content-between">
+							<a href="index.html" class="btn btn-outline-secondary">Home Page</a>
+							<a href="login" class="btn btn-outline-primary">Login</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Bootstrap JS Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<!-- Password Toggle Script -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const toggleButtons = document.querySelectorAll('.toggle-password');
+			
+			toggleButtons.forEach(button => {
+				button.addEventListener('click', function() {
+					const targetId = this.getAttribute('data-target');
+					const passwordInput = document.getElementById(targetId);
+					const icon = this.querySelector('i');
+					
+					// Toggle password visibility
+					if (passwordInput.type === 'password') {
+						passwordInput.type = 'text';
+						icon.classList.remove('bi-eye');
+						icon.classList.add('bi-eye-slash');
+					} else {
+						passwordInput.type = 'password';
+						icon.classList.remove('bi-eye-slash');
+						icon.classList.add('bi-eye');
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>
