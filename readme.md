@@ -135,7 +135,7 @@ To enable reCAPTCHA functionality:
 - Enhanced profile management
 - Remember me functionality
 
+Contact
+Your Name - atharvapimparkar1416@example.com
 
-## Author
-
-[atharvapimparkar1416@gmail.com/[Atharva-2510(https://github.com/Atharva-2510/CAPTCHA-VERIFICATION)]
+Project Link: https://github.com/Atharva-2510/Jagdish-Transport
