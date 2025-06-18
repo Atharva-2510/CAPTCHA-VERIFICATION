@@ -135,7 +135,8 @@ To enable reCAPTCHA functionality:
 - Enhanced profile management
 - Remember me functionality
 
-Contact
+## Contact
+
 Name: atharvapimparkar1416@gmail.com
 
 Project Link: https://github.com/Atharva-2510/CAPTCHA-VERIFICATION
